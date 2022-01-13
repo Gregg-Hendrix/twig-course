@@ -3,24 +3,44 @@
 /*
  * This file is part of Twig.
  *
- * (c) Fabien Potencier
+ * (c) 2010-2012 Fabien Potencier
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
-use Twig\TwigTest;
-
-/*
- * For Twig 1.x compatibility.
+/**
+ * Represents a template test.
+ *
+ * @author Fabien Potencier <fabien@symfony.com>
  */
-class_exists(TwigTest::class);
+class Twig_SimpleTest
+{
+    protected $name;
+    protected $callable;
+    protected $options;
 
-@trigger_error('Using the "Twig_SimpleTest" class is deprecated since Twig version 2.7, use "Twig\TwigTest" instead.', \E_USER_DEPRECATED);
-
-if (false) {
-    /** @deprecated since Twig 2.7, use "Twig\TwigTest" instead */
-    final class Twig_SimpleTest extends TwigTest
+    public function __construct($name, $callable, array $options = array())
     {
+        $this->name = $name;
+        $this->callable = $callable;
+        $this->options = array_merge(array(
+            'node_class' => 'Twig_Node_Expression_Test',
+        ), $options);
+    }
+
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    public function getCallable()
+    {
+        return $this->callable;
+    }
+
+    public function getNodeClass()
+    {
+        return $this->options['node_class'];
     }
 }
