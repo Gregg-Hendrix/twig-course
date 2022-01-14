@@ -32,32 +32,17 @@ switch ($uri) {
     // The Homepage! (/)
     case '/':
         echo $twig->render('homepage.twig', array(
-            'pageData' => array(
-                'title'    => 'Suit Up!',
-                'summary'  => 'You\'re <strong>hip</strong>, you\'re cool, you\'re a penguin! Now, start dressing like one! Find the latest suits, bow-ties, swim shorts and other outfits here!',
-                'hasSale'  => 1,
-            ),
+            'pageTitle' => 'Suit Up!',
             'products' => array(
-                new Product('Serious Businessman', 'formal.png'),
-                new Product('Penguin Dress', 'dress.png'),
-                new Product('Sportstar Penguin', 'sports.png'),
+                'Serious Businessman',
+                'Penguin Dress',
+                'Sportstar Penguin',
+                'Angel Costume',
+                'Penguin Accessories',
+                'Super Cool Penguin',
             ),
-            'featuredProducts' => array(
-                new Product('Angel Costume', 'angel-costume.png'),
-                new Product('Penguin Accessories', 'swatter.png'),
-                new Product('Super Cool Penguin', 'super-cool.png'),
-            ),
-            'saleEndsAt' => new \DateTime('+1 month'),
         ));
 
-        break;
-
-    case '/contact':
-        echo $twig->render('contact.twig', array(
-            'pageData' => array(
-                'title' => 'Find us in the south pole!',
-            )
-        ));
         break;
 
     // All other pages
