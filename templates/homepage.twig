@@ -23,10 +23,10 @@ This is how you make a comment!
 <div class="row">
 	{% for product in products %}
 		<div class="span4">
-			<h2>{{ product.name }}</h2>
+			<h2>{{ product.getName() }}</h2>
 
       <div class="product-img">
-        <img src="../assets/images/{{ product.imagePath}}" alt="{{ product.name }}",
+        <img src="../assets/images/{{ product.getimagePath()}}" alt="{{ product.getName() }}",
         </div>
         
             {# <div class="price">
