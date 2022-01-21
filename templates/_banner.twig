@@ -1,9 +1,4 @@
-{% if backgroundColor is not defined %}
-  {% set backgroundColor = backgroundColor %}
-{% else %}
-  {% set backgroundColor= 'light blue' %}
-  {% endif %}
-<div class="well" style="background-color: {{ backgroundColor}}";>
+<div class="well" style="background-color: {{ backgroundColor is defined? backgroundColor: 'lightblue'}}";>
 <h3>Save some Krill!</h3>
 
 <p>Sale in summer suits all this weekend! {{ pageData.title }}</p>
