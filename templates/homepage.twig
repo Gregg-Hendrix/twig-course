@@ -20,6 +20,8 @@ This is how you make a comment!
 {% endif %}
 </div>
 
+{{ include('_banner.twig', {'backgroundColor': 'violet'}) }}
+
 <div class="row">
 	{% for product in products %}
 		<div class="span4">
