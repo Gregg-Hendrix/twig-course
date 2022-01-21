@@ -41,11 +41,16 @@ switch ($uri) {
                 new Product ('Serious Businessman', 'formal.png'),
                 new Product('Penguin Dress', 'dress.png'),
                 new Product ('Sportstar Penguin', 'sports.png'),
+                // new Product('Angel Costume', 'angel-costume.png'),
+                // new Product('Penguin Accessories', 'swatter.png'),
+                // new Product('Super Cool Penguin', 'super-cool.png'),
+            ),
+            'saleEndsAt' => new \DateTime(' +1 month'),
+            'featuredProduct' => array(
                 new Product('Angel Costume', 'angel-costume.png'),
                 new Product('Penguin Accessories', 'swatter.png'),
                 new Product('Super Cool Penguin', 'super-cool.png'),
             ),
-            'saleEndsAt' => new \DateTime(' +1 month'),
         ));
 
         break;
