@@ -41,10 +41,15 @@ This is how you make a comment!
 		</div>
 	{% endfor %}
 
-    {% if products|length == 0 %}
+    {% if products is empty %}
       <div class ="alert alert-error span12">
       Oh no! We're all out of super-awesome penguin clothes!
       </div>
+      {% endif %}
+      {% if products|length is even %}
+       <div class="span12">
+        There is an even number of products! OMG!
+        </div>
     {% endif %}
 </div>
 

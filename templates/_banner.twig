@@ -1,3 +1,8 @@
+{% if backgroundColor is not defined %}
+  {% set backgroundColor = backgroundColor %}
+{% else %}
+  {% set backgroundColor= 'light blue' %}
+  {% endif %}
 <div class="well" style="background-color: {{ backgroundColor}}";>
 <h3>Save some Krill!</h3>
 
