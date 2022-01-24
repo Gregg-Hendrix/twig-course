@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title> {% block title %}Penguins Pants Plus!{% endblock %}</title>
+    <title> 
+    {%- if block('title') %}
+         {{ block('title') }} | Penguins Pants Plus!
+         {% else %}
+           Penguins Pants Plus - your place to look fly!
+        {% endif %}
+    </title>
 
     {% spaceless %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

@@ -1,14 +1,16 @@
 {% extends 'layout.twig' %}
 
-{% block title %} Start looking fly! {% endblock %}
+{% block title 'Start looking fly' ~pageData.title %}
 
 {%block body %}
-{% import 'macros.twig'as myMacros %}}
+{% import 'macros.twig'as myMacros %}
 {#
 This is how you make a comment!
 #}
 
 {# {{ featuredProduct.name}} #}
+
+{{ '<strong>Escape?!</strong>' }}
 
 <div class="hero-unit">
 	<h1>{{ pageData.title }}</h1>

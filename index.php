@@ -34,7 +34,7 @@ switch ($uri) {
         echo $twig->render('homepage.twig', array(
             'pageData' => array(
                 'title' => 'Suit up!',
-                'summary' => 'You\'re hip, you\'re cool, you\'re a penguin! Now start dressing like one',
+                'summary' => 'You\'re <strong>hip</strong>, you\'re cool, you\'re a penguin! Now start dressing like one',
                 'hasSale' => 1,
             ),
             'products' => array(
